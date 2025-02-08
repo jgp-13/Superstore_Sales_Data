@@ -2,10 +2,10 @@ import os
 import sys
 
 # Get download source of the zip file
-DATA_SOURCE_URL = 'https_//www.kaggle.com/datasets/aditisaxena20/superstore-sales-dataset/SuperStore_Orders.scv.zip'
+DATA_SOURCE_URL = 'https://www.kaggle.com/datasets/vivek468/superstore-dataset-final'
 
 # Get absolute path of the project directory
-BASE_DIR = os.path.dirname(os.path.abspath(os.getcwd()))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #Define key directories
 DATA_DIR = os.path.join(BASE_DIR, 'data')
@@ -18,3 +18,6 @@ NOTEBOOKS_DIR = os.path.join(BASE_DIR, 'notebooks')
 PROJECT_DIR = os.path.join(BASE_DIR, 'project')
 
 SCRIPTS_DIR = os.path.join(BASE_DIR, 'scripts')
+
+# Define key file paths
+RAW_DATA_FILE = os.path.join(RAW_DATA_DIR, "SuperStoreOrders.csv")
