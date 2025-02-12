@@ -51,8 +51,8 @@ The following steps were undertaken to clean the dataset:
 
 - **Python** (Pandas, NumPy)
 - **Jupyter Notebook** (for documenting the analysis and cleaning process)
-- **Git** (for version control)
-For file storage:
+- **Git** (for version control)<br>
+- For file storage:
    * **CSV** 
    * **json**
    * **Parquet**
