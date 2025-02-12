@@ -14,6 +14,7 @@ PROCESSED_DATA_DIR= os.path.join(DATA_DIR, '1-processed')
 CLEANED_DATA_DIR= os.path.join(DATA_DIR, '2-cleaned')
 
 NOTEBOOKS_DIR = os.path.join(BASE_DIR, 'notebooks')
+FIGURES_DIR = os.path.join(NOTEBOOKS_DIR, 'figures')
 
 PROJECT_DIR = os.path.join(BASE_DIR, 'project')
 
