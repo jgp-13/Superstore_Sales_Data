@@ -21,3 +21,4 @@ SCRIPTS_DIR = os.path.join(BASE_DIR, 'scripts')
 
 # Define key file paths
 RAW_DATA_FILE = os.path.join(RAW_DATA_DIR, "SuperStoreOrders.csv")
+CLEANED_DATA_FILE = os.path.join(CLEANED_DATA_DIR,'SuperStoreOrders_clean.csv')
