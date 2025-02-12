@@ -51,12 +51,12 @@ The following steps were undertaken to clean the dataset:
 
 - **Python** (Pandas, NumPy)
 - **Jupyter Notebook** (for documenting the analysis and cleaning process)
-- **Git** (for version control)<br>
+- **Git** (for version control)  
 - For file storage:
-   * **CSV** 
-   * **json**
-   * **Parquet**
-   * **Pickle**
+   * **CSV**: A simple text format for tabular data, with values separated by commas.
+   * **JSON**: A text-based format for storing and exchanging structured data, commonly used in APIs.
+   * **Parquet**: A columnar storage format optimized for large-scale data processing.
+   * **Pickle**: A Python-specific binary format for serializing and deserializing Python objects.
 
   
 ## **Results**
