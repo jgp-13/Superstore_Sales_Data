@@ -13,26 +13,28 @@ The objective of this project is to:
 ## **Dataset**
 
 The dataset used in this project is the **Superstore Sales Data**, which contains the following columns:
-- **order_id**: Unique identifier for each order.
-- **order_date**: The date when the order was placed.
-- **ship_date**: The date when the order was shipped.
-- **ship_mode**: The shipping method used for the order.
-- **customer_name**: Name of the customer who placed the order.
-- **segment**: Customer segment (e.g., Consumer, Home Office, Corporate).
-- **state**: State or region of the customer.
-- **country**: The country where the customer is located.
-- **market**: The market in which the order was placed (e.g., APAC, EMEA).
-- **region**: Geographic region for the order.
-- **category**: Product category (e.g., Office Supplies, Furniture).
-- **sub_category**: The sub-category of the product.
-- **product_name**: Name of the product.
-- **sales**: Sales amount for the order.
-- **quantity**: Quantity of items in the order.
-- **discount**: Discount applied to the order.
-- **profit**: Profit made from the order.
-- **shipping_cost**: Cost of shipping the order.
-- **order_priority**: Priority level of the order (e.g., Low, Medium, High).
-- **year**: The year when the order was placed.
+
+- **Row ID**: A unique identifier for each row.
+- **Order ID**: A unique identifier for each order.
+- **Order Date**: The date on which the order was placed.
+- **Ship Date**: The date on which the order was shipped.
+- **Ship Mode**: The shipping method used for the order.
+- **Customer ID**: A unique identifier for each customer.
+- **Customer Name**: The name of the customer who placed the order.
+- **Segment**: The customer segment (Consumer, Corporate and Home Office).
+- **Country**: The country where the customer is located.
+- **City**: The city where the customer is located.
+- **State**: The state of the customer.
+- **Postal Code**: The postal code of the customer's location.
+- **Region**: The geographic region where the order was placed.
+- **Product ID**: A unique identifier for each product.
+- **Category**: The category of the product.
+- **Sub-Category**: The sub-category of the product.
+- **Product Name**: The name of the product.
+- **Sales**: The total sales amount for the order.
+- **Quantity**: The quantity of items in the order.
+- **Discount**: The discount applied to the order.
+- **Profit**: The profit made from the order.
 
 ## **Data Cleaning Process**
 
@@ -50,24 +52,21 @@ The following steps were undertaken to clean the dataset:
 - **Python** (Pandas, NumPy)
 - **Jupyter Notebook** (for documenting the analysis and cleaning process)
 - **Git** (for version control)
-- **CSV** (for data storage)
+For file storage:
+   * **CSV** 
+   * **json**
+   * **Parquet**
+   * **Pickle**
 
-## **How to Run the Project**
-
-1. Clone this repository to your local machine:
-   ```
-   git clone https://github.com/jgp-13/superstore-sales-data-cleaning.git
-   ```
-
-2. Install the required libraries:
-```
-pip install pandas numpy
-```
-3. Open the Jupyter notebook file (e.g., `superstore_data_cleaning.ipynb`) and run the code cells to execute the data cleaning steps.
-
+  
 ## **Results**
 
 * A cleaned version of the dataset, ready for analysis and visualization.
+* 3 Extra columns:
+- **Product ID dup**: A boolean mask indicating duplicated product IDs.
+- **Product ID updated**: The product identifier after being identified as updated.
+- **Shipping Duration**: The time taken for the order to be shipped, typically measured from the order date to the ship date.
+
 * A detailed analysis of the cleaning process and decisions made at each stage.
 
 ## **Contributing**
