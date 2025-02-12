@@ -21,13 +21,7 @@
 node_modules/
 creds.js
 
-# Private Files
-*.json
-*.csv
-*.csv.gz
-*.tsv
-*.tsv.gz
-*.xlsx
+
 
 
 # Mac/OSX
@@ -112,7 +106,7 @@ docs/_build/
 target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+.ipynb_checkpoints/
 
 # IPython
 profile_default/
