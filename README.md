@@ -1,18 +1,21 @@
-# **Superstore Sales Data Cleaning**
+# **Superstore Sales Data Cleaning & Visualisation**
 
-This repository contains a project for cleaning and transforming a messy **Superstore Sales Data** dataset. The dataset includes sales records from a retail business and contains issues such as missing values, duplicates, and inconsistent formatting, which were addressed to prepare the data for analysis and visualization.
+This repository contains a project focused on cleaning and transforming a messy **Superstore Sales Data** dataset. The dataset includes sales records from a retail business and contains issues such as missing values, duplicates, and inconsistent formatting. Additionally, after cleaning the data, visualisations were created to extract business insights.
 
+---
 ## **Project Overview**
 
 The objective of this project is to:
-- Clean the raw sales data to make it ready for analysis.
-- Remove duplicates and handle missing data.
-- Standardize formats for dates and categorical variables.
-- Prepare the dataset for effective data visualizations and business insights.
+- **Clean and preprocess raw sales data** to make it analysis-ready.
+- **Identify and remove duplicates** to ensure data integrity.
+- **Handle missing values** using appropriate strategies.
+- **Standardise formats** for dates and categorical variables.
+- **Create a sample of data visualisations** to extract insights for business decision-making.
 
+---
 ## **Dataset**
 
-The dataset used in this project is the **Superstore Sales Data**, which contains the following columns:
+The dataset used in this project is the **Superstore Sales Data**, which contains key information about sales, customers, and product categories. Below are the containing columns:
 
 - **Row ID**: A unique identifier for each row.
 - **Order ID**: A unique identifier for each order.
@@ -36,48 +39,89 @@ The dataset used in this project is the **Superstore Sales Data**, which contain
 - **Discount**: The discount applied to the order.
 - **Profit**: The profit made from the order.
 
+---
 ## **Data Cleaning Process**
 
 The following steps were undertaken to clean the dataset:
-1. **Duplicate Removal**: Identified and removed any duplicate records from the dataset.
-2. **Handling Missing Values**: Imputed missing values using relevant strategies (e.g., mean imputation, deletion).
-3. **Standardization**: Standardized column names and formats to ensure consistency.
-4. **Date Formatting**: Converted `order_date` and `ship_date` to uniform date formats.
-5. **Categorical Data**: Cleaned categorical data such as `order_priority`, `ship_mode`, and `segment` to ensure proper grouping.
-6. **Outlier Detection**: Checked and handled outliers, especially in `sales`, `profit`, and `quantity` columns.
-7. **Data Types**: Ensured proper data types (e.g., numerical, categorical, dates) for each column.
+1. **Duplicate Removal**: Identified and removed any duplicate records.
+2. **Handling Missing Values**: Imputed or removed missing values based on relevance.
+3. **Standardisation**: Cleaned column names, reformatted date columns, and ensured consistency in categorical variables.
+4. **Outlier Detection & Treatment**: Checked for extreme values in sales and profit columns.
+5. **Feature Engineering**: Added new columns:
+   - **Product ID Dup**: Identifies duplicated product IDs.
+   - **Updated Product ID**: Adjusted identifier for product updates.
+   - **Shipping Duration**: Number of days between order and shipping dates.
+6. **Data Types**: Ensured proper data types (e.g., numerical, categorical, dates) for each column.
 
+---
+## **Data Visualisation**
+
+After cleaning the data, visualisations were created to extract key business insights. 
+
+This includes:
+
+📊 **Metrics Distributions**: Distribution of key metrics.  
+📌 **Profit Distribution**: Understanding profitability by category and region.  
+📉 **Discount vs. Profit Analysis**: Evaluating the impact of discounts on profit.  
+
+For a  more detailed analysis and conclusions, check out the **[Data Visualisation Notebook](notebooks/03-Data_Visualisation.ipynb)**.
+
+### **Key Visualisations**
+
+#### **Discount vs. Profit Relationship**
+![Discount vs. Profit](notebooks/figures/scatter_disc_vs_profit.png)
+
+#### **Correlation Heatmap**
+![Correlation Heatmap](notebooks/figures/heatmap_corr.png)
+
+#### **Boxplot of Key Metrics**
+![Boxplot Metrics](notebooks/figures/boxplot_metrics.png)
+
+
+
+---
 ## **Technologies Used**
 
-- **Python** (Pandas, NumPy)
-- **Jupyter Notebook** (for documenting the analysis and cleaning process)
-- **Git** (for version control)  
-- For file storage:
-   * **CSV**: A simple text format for tabular data, with values separated by commas.
-   * **JSON**: A text-based format for storing and exchanging structured data, commonly used in APIs.
-   * **Parquet**: A columnar storage format optimized for large-scale data processing.
-   * **Pickle**: A Python-specific binary format for serializing and deserializing Python objects.
+- **Python** (Pandas, NumPy, Matplotlib, Seaborn)
+- **Jupyter Notebook** (for interactive data analysis)
+- **Git & GitHub** (for version control and collaboration)
+- **File Formats**:
+   - **CSV**: Standard data storage format.
+   - **JSON**: Used for metadata storage.
+   - **Parquet**: Optimised for large-scale data processing.
+   - **Pickle**: For storing Python objects efficiently.
 
-  
-## **Results**
+---
+## **Project Files & Structure**
 
-* A cleaned version of the dataset, ready for analysis and visualization.
-* 3 Extra columns:
-- **Product ID dup**: A boolean mask indicating duplicated product IDs.
-- **Product ID updated**: The product identifier after being identified as updated.
-- **Shipping Duration**: The time taken for the order to be shipped, typically measured from the order date to the ship date.
+📂 **data/** → Contains raw, processed, and cleaned data.  
+📂 **notebooks/** → Jupyter Notebooks for data exploration, cleaning, and visualisation.  
+📂 **scripts/** → Python scripts for data processing automation.  
+📂 **superstore_sales/** → Configuration and reusable functions.  
 
-* A detailed analysis of the cleaning process and decisions made at each stage.
+Key Notebooks:
+- [**Data Cleaning Notebook**](notebooks/02-Data_Cleaning.ipynb)
+- [**Data Comparison (Raw vs Cleaned)**](notebooks/data_comparison_raw_vs_clean.ipynb)
+- [**Data Visualisation Notebook**](notebooks/03-Data_Visualisation.ipynb)
 
-## **Contributing**
+---
+## **Results & Key Insights**
 
-Feel free to fork this repository and submit a pull request if you have suggestions or improvements. Ensure your code adheres to the project's coding standards and is well-documented.
+✔ **Data is fully cleaned and formatted for analysis.**  
+✔ **Duplicate records were removed, and missing values were handled.**  
+✔ **Standardised date formats and categorical data.**  
+✔ **Business insights extracted through visualisations.**  
 
+---
+## **Summary**
+The dataset is now cleaned, structured, and well-prepared for advanced analysis or dashboard creation. This thorough data cleaning process ensures that the dataset is reliable and accurate, offering a solid foundation for data-driven decision-making and future analyses. It’s a powerful reminder of how critical data cleaning is to ensure meaningful insights and impactful results.
+
+
+
+---
 ## **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
 
 
 
